@@ -1,1 +1,17 @@
-# nest-tfs
+## 项目搭建
+- 在GitHub上创建一个新的repository
+- 克隆到本地
+- 在项目根目录下运行 nest new backend
+- 进入 backend 目录下运行 nest g app admin，创建一个admin的目录结构
+- 启动admin 使用 nest start -w admin
+- 运行 nest g lib db 并设置library为 @libs
+- 在admin 目录下引入DbModule
+- yarn add nestjs-typegoose @typegoose/typegoose mongoose @types/mongoose
+- 在DbModule中链接数据库
+- 在lib/db下创建models目录
+- 在DbModule中导入再导出models
+- nest g mo -p admin users
+- nest g co -p admin users
+- yarn add @nestjs/swagger swagger-ui-express nestjs-mongoose-crud
+- 在admin/main.ts中加入swagger相关的配置
+- 在UsersController中引入model
